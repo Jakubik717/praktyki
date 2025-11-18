@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password=$_POST["password"];
     $repeat_password=$_POST["repeat_password"];
 
-    if (isset($login) && !empty($login) && isset($password) && !empty($password) && isset($repeat_password) && !empty($repeat_password)){
+  if (!empty($login) && !empty($password) && !empty($repeat_password)){
         echo "dane odebrane prawidłowo";
 
     } else {
@@ -15,3 +15,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 ?>
+
