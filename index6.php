@@ -5,11 +5,6 @@ if ($miasto ){
     echo "Wybrano miasto: ".htmlspecialchars($miasto);
 
 } else {
-    echo "Nie wybrano miasta";
+    echo "musisz wybrać miasto z listy";
 }
-
-
-
-
-
 ?>
