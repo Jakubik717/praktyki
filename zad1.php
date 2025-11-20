@@ -21,16 +21,17 @@ foreach($tab as $srednia){
 
 }
 if($i > 0){
-    echo "Średnia ocen wynosi: ". ($sum / $i);
+    $srednia = $sum / $i
+    echo "Średnia ocen wynosi: ". number_format($srednia,2);
 }
 else {
     echo "Nie podano żadnej oceny ";
 }
-$czy_zdal = $srednia >= 2.0;
-if($czy_zdal){
+if($srednia >= 2.0){
     echo " zdałeś ";
 } else {
     echo " nie zdałeś ";
 }
 }
+
 ?>
