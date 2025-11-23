@@ -30,7 +30,7 @@ else {
 if($srednia >= 2.0){
     echo " zdałeś ";
 } else {
-    echo " nie zdałeś ";
+    echo " nie zdałeś klasy ";
 }
 }
 
