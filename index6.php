@@ -8,5 +8,3 @@ if ($miasto ){
     echo "musisz wybrać miasto z listy";
 }
 ?>
-
-
