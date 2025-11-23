@@ -24,6 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "przedmioty" => $lista_przedmiotow
     ];
     file_put_contents($plik, json_encode($uczniowie, JSON_PRETTY_PRINT));
+    
+    echo "<p style='color:green'>Uczeń dodany!</p>";
 }
 echo "<h1>Lista uczniów</h1>";
 if (empty($uczniowie)) {
