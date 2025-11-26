@@ -1,6 +1,8 @@
 body{
     background-color: turquoise;
+    cursor: pointer;
 }
+
 a {
   transition: background-color 0.5s;
 }
@@ -13,14 +15,17 @@ b:hover{
 
 .background1:hover {
     background-color: coral;
+     cursor: pointer;
 }
 
 .background2:hover {
     background-color: deeppink;
+     cursor: pointer;
 }
 
 .background3:hover {
     background-color: darkkhaki;
+     cursor: pointer;
 }
 .gap{
     display: flex;
@@ -30,48 +35,48 @@ b:hover{
 .a {
      width: 60px;
     height: 60px;
-    border: 1px solid;
+    border: 3px solid;
     border-color: red; 
 }
 .b { 
      width: 60px;
     height: 60px;
-    border: 1px solid;
+    border: 3px solid;
     border-color: orange;
 }
 .c {
      width: 60px;
     height: 60px;
-    border: 1px solid;
+    border: 3px solid;
     border-color: yellow; 
 }
 .d { 
      width: 60px;
     height: 60px;
-    border: 1px solid;
+    border: 3px solid;
     border-color: green; 
 }
 .e { 
      width: 60px;
     height: 60px;
-    border: 1px solid;
+    border: 3px solid;
     border-color: blue; 
 }
 .f { 
      width: 60px;
     height: 60px;
-    border: 1px solid;
+    border: 3px solid;
     border-color: violet; 
 }
 .g { 
      width: 60px;
     height: 60px;
-    border: 1px solid;
+    border: 3px solid;
     border-color: black; 
 }
 .h { 
      width: 60px;
     height: 60px;
-    border: 1px solid;
+    border: 3px solid;
     border-color: white; 
 }
