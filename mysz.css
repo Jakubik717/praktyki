@@ -7,17 +7,19 @@ a {
 a:hover{
    background-color: gold;
 }
-
 b:hover{
-background-color: turquoise;
+     text-decoration: underline;
 }
-.background1{
+
+.background1:hover {
     background-color: coral;
 }
-.background2{
+
+.background2:hover {
     background-color: deeppink;
 }
-.background3{
+
+.background3:hover {
     background-color: darkkhaki;
 }
 .gap{
