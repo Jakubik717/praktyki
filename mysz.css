@@ -1,8 +1,12 @@
 body{
     background-color: turquoise;
 }
-.colour{
-    color: crimson;
+a {
+  
+  transition: background-color 0.5s;
+}
+a:hover{
+   background-color: gold;
 }
 
 :hover{
