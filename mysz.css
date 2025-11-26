@@ -2,14 +2,13 @@ body{
     background-color: turquoise;
 }
 a {
-  
   transition: background-color 0.5s;
 }
 a:hover{
    background-color: gold;
 }
 
-:hover{
+b:hover{
 background-color: turquoise;
 }
 .background1{
