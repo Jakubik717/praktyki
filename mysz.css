@@ -1,0 +1,72 @@
+body{
+    background-color: turquoise;
+}
+.colour{
+    color: crimson;
+}
+
+:hover{
+background-color: turquoise;
+}
+.background1{
+    background-color: coral;
+}
+.background2{
+    background-color: deeppink;
+}
+.background3{
+    background-color: darkkhaki;
+}
+.gap{
+    display: flex;
+    gap: 15px;
+}
+
+.a {
+     width: 60px;
+    height: 60px;
+    border: 1px solid;
+    border-color: red; 
+}
+.b { 
+     width: 60px;
+    height: 60px;
+    border: 1px solid;
+    border-color: orange;
+}
+.c {
+     width: 60px;
+    height: 60px;
+    border: 1px solid;
+    border-color: yellow; 
+}
+.d { 
+     width: 60px;
+    height: 60px;
+    border: 1px solid;
+    border-color: green; 
+}
+.e { 
+     width: 60px;
+    height: 60px;
+    border: 1px solid;
+    border-color: blue; 
+}
+.f { 
+     width: 60px;
+    height: 60px;
+    border: 1px solid;
+    border-color: violet; 
+}
+.g { 
+     width: 60px;
+    height: 60px;
+    border: 1px solid;
+    border-color: black; 
+}
+.h { 
+     width: 60px;
+    height: 60px;
+    border: 1px solid;
+    border-color: white; 
+}
