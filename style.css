@@ -1,0 +1,46 @@
+body{
+    background-color: bisque;
+}
+
+p{
+color: blueviolet;
+}
+.fiolet{
+    color: gray;
+}
+.inny{
+    color: chocolate;
+}
+.kolor{
+    background-color: darkcyan;
+}
+.kolejny{
+    background-color: dodgerblue;
+}
+.nastepny{
+    background-color: aqua;
+}
+.pierwszy{
+    background-color: red;
+}
+.drugi{
+    background-color: orange;
+}
+.trzeci{
+    background-color: yellow;
+}
+.czwarty{
+    background-color: green;
+}
+.piąty{
+    background-color: blue;
+}
+.szósty{
+    background-color: violet;
+}
+.siódmy{
+    background-color: black;
+}
+.ósmy{
+    background-color: white;
+}
