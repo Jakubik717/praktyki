@@ -2,14 +2,22 @@
 .space{
     margin-bottom: 60px;
 }
-.gap{
-    margin-right: 30px;
-}
-.delete{
-    margin-right: 0;
-}
+
 .box{
     padding: 25px;
     border: 1px dotted darkgray;
     margin-right: 30px; 
+}
+
+.container {
+    display: flex;
+    gap: 0;
+}
+
+.gap {
+    flex: 1;
+}
+
+.colours > .box:last-child{
+    margin-right: 0;
 }
