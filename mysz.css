@@ -30,91 +30,48 @@ b:hover{
     display: flex;
     gap: 15px;
 }
-
-.a {
-     width: 60px;
-    height: 60px;
-    border: 3px solid;
-    border-color: red; 
+.a, .b, .c, .d, .e, .f, .g, .h {
+   padding: 30px;
     cursor: pointer;
 }
+
+.a { border: 3px solid red !important; }
 .a:hover {
      background-color: red;
 }
 
-.b { 
-     width: 60px;
-    height: 60px;
-    border: 3px solid;
-    border-color: orange;
-    cursor: pointer;
-}
+.b { border: 3px solid orange !important; }
 .b:hover {
      background-color: orange;
 }
 
-.c {
-     width: 60px;
-    height: 60px;
-    border: 3px solid;
-    border-color: yellow; 
-    cursor: pointer;
-}
+.c { border: 3px solid yellow !important; }
 .c:hover {
      background-color: yellow;
 }
 
-.d { 
-     width: 60px;
-    height: 60px;
-    border: 3px solid;
-    border-color: green; 
-    cursor: pointer;
-}
+.d { border: 3px solid green !important; }
 .d:hover {
      background-color: green;
 }
 
-.e { 
-     width: 60px;
-    height: 60px;
-    border: 3px solid;
-    border-color: blue; 
-    cursor: pointer;
-}
+.e { border: 3px solid blue !important; }
 .e:hover {
      background-color: blue;
 }
 
-.f { 
-     width: 60px;
-    height: 60px;
-    border: 3px solid;
-    border-color: violet; 
-    cursor: pointer;
-}
+.f { border: 3px solid violet !important; }
 .f:hover {
      background-color: violet;
 }
 
-.g { 
-     width: 60px;
-    height: 60px;
-    border: 3px solid;
-    border-color: black; 
-    cursor: pointer;
-}
+.g { border: 3px solid black !important; }
 .g:hover {
      background-color: black;
 }
 
-.h { 
-     width: 60px;
-    height: 60px;
-    border: 3px solid;
-    border-color: white; 
-    cursor: pointer;
-}
+.h { border: 3px solid white !important; }
 .h:hover {
      background-color: white;
 }
+
