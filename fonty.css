@@ -1,0 +1,31 @@
+.intro {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
+.helvetica {
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.courier {
+    font-family: "Courier New", monospace;
+}
+.boxes {
+    display: flex;
+    gap: 10px;
+}
+
+.box {
+    flex-grow: 1;
+}
+
+.one,
+.two {
+    font-family: Arial, sans-serif;
+}
+
+.three {
+    font-family: "Lucida Console", monospace;
+    font-size: 20px;
+}
