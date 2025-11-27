@@ -9,42 +9,7 @@
     margin-right: 0;
 }
 .box{
-    padding: 40px;
+    padding: 25px;
     border: 1px dotted darkgray;
-    margin-right: 10px; 
-}
-.box1{
-    padding: 40px;
-    border: 1px dotted darkgray;
-    margin-right: 10px; 
-}
-.box2{
-    padding: 40px;
-    border: 1px dotted darkgray;
-    margin-right: 10px; 
-}
-.box3{
-    padding: 40px;
-    border: 1px dotted darkgray;
-    margin-right: 10px; 
-}
-.box4{
-    padding: 40px;
-    border: 1px dotted darkgray;
-    margin-right: 10px; 
-}
-.box5{
-    padding: 40px;
-    border: 1px dotted darkgray;
-    margin-right: 10px; 
-}
-.box6{
-    padding: 40px;
-    border: 1px dotted darkgray;
-    margin-right: 10px; 
-}
-.box7{
-    padding: 40px;
-    border: 1px dotted darkgray;
-    margin-right: 10px; 
+    margin-right: 30px; 
 }
