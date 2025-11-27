@@ -1,3 +1,120 @@
 body{
-    background-color: aliceblue;
+    background-color: turquoise;   
+}
+
+a {
+  transition: background-color 0.5s;
+}
+a:hover{
+   background-color: gold;
+}
+b:hover{
+     text-decoration: underline;
+}
+
+.background1:hover {
+    background-color: coral;
+     cursor: pointer;
+}
+
+.background2:hover {
+    background-color: deeppink;
+     cursor: pointer;
+}
+
+.background3:hover {
+    background-color: darkkhaki;
+     cursor: pointer;
+}
+.gap{
+    display: flex;
+    gap: 15px;
+}
+
+.a {
+     width: 60px;
+    height: 60px;
+    border: 3px solid;
+    border-color: red; 
+    cursor: pointer;
+}
+.a:hover {
+     background-color: red;
+}
+
+.b { 
+     width: 60px;
+    height: 60px;
+    border: 3px solid;
+    border-color: orange;
+    cursor: pointer;
+}
+.b:hover {
+     background-color: orange;
+}
+
+.c {
+     width: 60px;
+    height: 60px;
+    border: 3px solid;
+    border-color: yellow; 
+    cursor: pointer;
+}
+.c:hover {
+     background-color: yellow;
+}
+
+.d { 
+     width: 60px;
+    height: 60px;
+    border: 3px solid;
+    border-color: green; 
+    cursor: pointer;
+}
+.d:hover {
+     background-color: green;
+}
+
+.e { 
+     width: 60px;
+    height: 60px;
+    border: 3px solid;
+    border-color: blue; 
+    cursor: pointer;
+}
+.e:hover {
+     background-color: blue;
+}
+
+.f { 
+     width: 60px;
+    height: 60px;
+    border: 3px solid;
+    border-color: violet; 
+    cursor: pointer;
+}
+.f:hover {
+     background-color: violet;
+}
+
+.g { 
+     width: 60px;
+    height: 60px;
+    border: 3px solid;
+    border-color: black; 
+    cursor: pointer;
+}
+.g:hover {
+     background-color: black;
+}
+
+.h { 
+     width: 60px;
+    height: 60px;
+    border: 3px solid;
+    border-color: white; 
+    cursor: pointer;
+}
+.h:hover {
+     background-color: white;
 }
