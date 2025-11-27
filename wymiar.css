@@ -1,0 +1,40 @@
+.para1 {
+    height: 100px !important;
+}
+.para2 {
+    width: 400px !important;
+}
+.para3 {
+    width: 350px !important;
+}
+.boxes {
+    display: flex;
+}
+.box1 {
+    width: 200px !important;
+    height: 150px !important;
+}
+.box2 {
+    width: 250px !important;
+    height: 180px !important;
+}
+.box3 {
+    width: 150px !important;
+    height: 120px !important;
+}
+.colors {
+    display: flex;
+    gap: 10px;
+}
+.colors div:nth-child(even) {
+    width: 50px !important;
+    height: 50px !important;
+}
+.colors div:nth-child(odd) {
+    width: 30px !important;
+    height: 30px !important;
+}
+.colors div {
+    border: 1px dotted darkgray;
+}
+
