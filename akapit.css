@@ -14,10 +14,13 @@
     gap: 0;
 }
 
-.gap {
+.gap2 {
     flex: 1;
 }
 
 .colours > .box:last-child{
     margin-right: 0;
+}
+.gap{
+    margin-right: 30px;
 }
