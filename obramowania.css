@@ -1,0 +1,39 @@
+.highlight {
+    border: 2px solid orange !important;
+    padding: 2px 4px !important;
+}
+.third {
+    border: 2px dashed green !important;
+    padding: 4px !important;
+}
+.box1 {
+    border: 2px solid red !important;
+    padding: 10px !important;
+}
+.box2 {
+    border: 3px dashed blue !important;
+    padding: 10px !important;
+}
+.box3 {
+    border: 2px dotted green !important;
+    padding: 10px !important;
+}
+.colorbox {
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 5px !important;
+}
+.colorbox:nth-child(odd) {
+    border: 2px dashed purple !important;
+}
+.colorbox:nth-child(even) {
+    border: 4px dotted orange !important;
+}
+.boxes {
+    display: flex !important;
+    gap: 10px !important;
+}
+.colors {
+    display: flex !important;
+    gap: 15px !important;
+}
