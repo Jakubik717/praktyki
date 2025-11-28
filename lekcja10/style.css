@@ -1,6 +1,42 @@
 body{
-   background-color:  darkgray;
+    background-color: darkgrey;  
 }
 .login{
-    font-family: cursive;
+    font-family: 'Georgia', sans-serif;
+}
+.cytat{
+    font-family:Arial, Helvetica, sans-serif ;
+}
+.documentation{
+    font-family: 'Courier New', Courier, monospace;
+}
+.second-menu{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.options{
+    font-family: 'Times New Roman', Times, serif;
+}
+.entrance{
+    font-family:Impact, 'Arial Narrow Bold', sans-serif
+}
+.box{
+    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+}
+.box1{
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+.box3{
+    font-family:  Georgia, Times, 'Times New Roman', serif;
+}
+.broken{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.broken2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.broken3{
+    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.foot{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
 }
