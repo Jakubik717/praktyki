@@ -11,10 +11,7 @@
 .courier {
     font-family: "Courier New", monospace;
 }
-.boxes {
-    display: flex;
-    gap: 10px;
-}
+
 
 .box {
     flex-grow: 1;
