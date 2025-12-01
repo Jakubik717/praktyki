@@ -3,18 +3,33 @@ body{
 }
 .login{
     font-family: 'Georgia', sans-serif;
+    text-align: end;
+    padding: 10px;  
+    background-color: antiquewhite;
 }
 .cytat{
     font-family:Arial, Helvetica, sans-serif ;
+    text-align: center; 
+    padding: 10px;  
+    background-color: darkgoldenrod;
 }
 .documentation{
     font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+     padding: 10px;  
+     background-color: darkkhaki;
 }
 .second-menu{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: start;
+     padding: 30px;   
+     background-color: gold;
 }
 .options{
     font-family: 'Times New Roman', Times, serif;
+    text-align: start; 
+    padding: 30px;  
+     background-color: lemonchiffon;
 }
 .entrance{
     font-family:Impact, 'Arial Narrow Bold', sans-serif
@@ -39,6 +54,9 @@ body{
 }
 .foot{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    text-align: end; 
+    padding: 10px;  
+    background-color: chocolate;
 }
 .size{
     width: 1280px;
@@ -48,9 +66,4 @@ body{
     width: 200px;
     height: 150px;
    object-fit: cover;
-}
- a.active{
-      text-decoration: none;
-
-
 }
