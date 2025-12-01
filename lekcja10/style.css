@@ -78,3 +78,15 @@ body{
     padding: 1px;  
     background-color: darkorange;
 }
+.offer{
+    display: flex; gap: 10px
+}
+.text{
+    display: flex; gap: 10px
+}
+.list{
+    list-style-type: none;
+}
+.list1{
+    list-style-type: none;
+}
