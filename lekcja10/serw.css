@@ -30,6 +30,7 @@ body{
     text-align: start; 
     padding: 30px;  
      background-color: lemonchiffon;
+     flex-grow: 1;
 }
 .entrance{
     font-family:Impact, 'Arial Narrow Bold', sans-serif
