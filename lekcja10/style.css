@@ -59,7 +59,7 @@ a.broken{
 .foot{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
     text-align: end; 
-    padding: 1px;  
+    padding: 5px 0;
     background-color: chocolate;
 }
 .size{
