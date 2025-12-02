@@ -4,19 +4,19 @@ body{
 .login{
     font-family: 'Georgia', sans-serif;
     text-align: end;
-    padding: 1px;  
+    padding: 20px 0;  
     background-color: antiquewhite;
 }
 .cytat{
     font-family:Arial, Helvetica, sans-serif ;
     text-align: center; 
-    padding: 1px;  
+    padding: 30px 0;  
     background-color: darkgoldenrod;
 }
 .documentation{
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
-     padding: 1px;  
+     padding: 20px 0;  
      background-color: darkkhaki;
 }
 .second-menu{
@@ -46,7 +46,7 @@ body{
 .box3{
     font-family:  Georgia, Times, 'Times New Roman', serif;
 }
-.broken{
+a.broken{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     flex: 4 0
 }
