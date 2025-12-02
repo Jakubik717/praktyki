@@ -52,16 +52,16 @@ a.broken{
 }
 .broken2{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    flex: 4 0
+    
 }
 .broken3{
     font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
-    flex: 2 0
+    
 }
 .foot{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
     text-align: end; 
-    padding: 1px;  
+    padding: 5px 0;  
     background-color: chocolate;
 }
 .size{
@@ -75,11 +75,12 @@ a.broken{
 }
 .feet{
     text-align: start; 
-    padding: 1px;  
     background-color: darkorange;
 }
 .offer{
-    display: flex; gap: 10px
+    display: flex; 
+    gap: 10px;
+    justify-content: space-around;
 }
 .text{
     display: flex; gap: 10px
