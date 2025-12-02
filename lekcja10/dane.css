@@ -37,21 +37,26 @@ body{
 }
 .box{
     font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+    flex: 4 0
 }
 .box1{
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    flex: 4 0
 }
 .box3{
     font-family:  Georgia, Times, 'Times New Roman', serif;
 }
 .broken{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    flex: 4 0
 }
 .broken2{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    flex: 4 0
 }
 .broken3{
     font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    flex: 2 0
 }
 .foot{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
@@ -72,4 +77,16 @@ body{
     text-align: start; 
     padding: 1px;  
     background-color: darkorange;
+}
+.offer{
+    display: flex; gap: 10px
+}
+.text{
+    display: flex; gap: 10px
+}
+.list{
+    list-style-type: none;
+}
+.list1{
+    list-style-type: none;
 }
