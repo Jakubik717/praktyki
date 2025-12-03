@@ -1,14 +1,10 @@
 <?php
 
-$a=0;
-$b=1;
-while($b <= 100){
-    $a= $a + $b;
-    $b++;
+$miasto=$_POST['miasta'];
+if ($miasto ){
+    echo "Wybrano miasto: ".$miasto;
+
+} else {
+    echo "musisz wybrać miasto z listy";
 }
-echo "Suma liczb 1-100: ".$a;
-
-
-
-
 ?>
