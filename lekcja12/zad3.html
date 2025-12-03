@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Tworzenie, usuwanie, dodawanie elementów | JavaScript</title>
+    <style>
+        :root
+        {
+            --text-color: 68, 68, 68;
+        }
+
+        *
+        {
+            font-family: Lato, sans-serif;
+            color: rgb(var(--text-color));
+            line-height: 1.4;
+        }
+
+        body
+        {
+            margin: 1rem;
+            padding: 0;
+        }
+
+        section
+        {
+            &+section
+            {
+                margin-top: 25px;
+            }
+
+            h2
+            {
+                border-bottom: 1px solid rgba(var(--text-color), 0.3);
+            }
+        }
+
+        .text-boxes
+        {
+            display: flex;
+            gap: 10px;
+
+            div
+            {
+                flex: 4 0;
+
+                &:last-of-type
+                {
+                    flex-grow: 2;
+                }
+            }
+        }
+
+        .color-boxes
+        {
+            display: flex;
+            gap: 15px;
+
+            div
+            {
+                background-color: lightgray;
+                width: 30px;
+                height: 30px;
+
+                &.color-box
+                {
+                    background-color: orange;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Tworzenie, usuwanie, dodawanie elementów | JavaScript</h1>
+
+<section>
+    <h2 id="text-color">Akapit tekstu</h2>
+    <p class="aliquam">
+        Aliquam non ut hic ea et quam. <span>Dolores esse quis totam</span> aut et consequatur quia hic iste commodi quis
+        libero explicabo. Natus ut labore sit <span>libero animi consequuntur</span> nulla.
+    </p>
+</section>
+
+<section>
+    <h2 id="bg-color">Kolumny tekstu</h2>
+    <div class="text-boxes">
+        <div>
+            Voluptas est et et distinctio voluptate nihil unde est. Nemo aperiam suscipit iste qui libero voluptas ex
+            dolor nihil animi enim quibusdam. Veniam sapiente facilis et sequi atque vitae quos provident ipsam in dolor.
+            Omnis reiciendis sint excepturi voluptatem incidunt et et sunt et.
+        </div>
+        <div>
+            Numquam sint doloribus perferendis aspernatur illo maxime beatae eum nisi et possimus. Placeat culpa non et
+            vel sit veniam qui architecto dolor nostrum laudantium dicta ut quis.
+        </div>
+        <div>
+            Numquam sint doloribus perferendis aspernatur illo maxime beatae eum nisi et possimus.
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2 id="eight-colors">8 boxów</h2>
+    <div class="color-boxes">
+        <div></div>
+        <div class="color-box"></div>
+        <div></div>
+        <div></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div></div>
+        <div></div>
+    </div>
+</section>
+<script>
+        const textSection = document.querySelector('#text-color').parentElement;
+        const newParagraph = document.createElement('p');
+        newParagraph.textContent = " dolor nostrum  doloribus perferendis aspernatur illo ";
+        textSection.appendChild(newParagraph);
+
+        const textBoxes = document.querySelector('.text-boxes');
+        const newDiv = document.createElement('div');
+        newDiv.textContent = " voluptate nihil unde maxime beatae eum nisi et";
+        textBoxes.insertBefore(newDiv, textBoxes.children[1]);
+
+        document.querySelectorAll('.color-boxes .color-box').forEach(box => box.remove());
+        document.querySelectorAll('.color-boxes div').forEach(box => box.style.backgroundColor = 'blue');
+
+</script>
+</body>
+</html>
