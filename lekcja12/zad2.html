@@ -114,22 +114,22 @@
     </div>
 </section>
 <script>
-    const akapit = document.querySelector('.aliquam');
-    
-    const allColumns = document.querySelectorAll('.text-boxes div');
-    const column1 = allColumns[1];
-    const column2 = allColumns[2];
+        const akapit = document.querySelector('.aliquam');
+        
+        const allColumns = document.querySelectorAll('.text-boxes div');
+        const column1 = allColumns[1];
+        const column2 = allColumns[2];
 
-    const orangeBoxes = document.querySelectorAll('.color-box');
-    
-    akapit.style.border = '3px solid red';
-    column1.style.border = '3px dashed blue';
-    column2.style.border = '3px dashed purple';
+        const orangeBoxes = document.querySelectorAll('.color-box');
+        
+        akapit.style.border = '3px solid red';
+        column1.style.border = '3px dashed blue';
+        column2.style.border = '3px dashed purple';
 
-    orangeBoxes.forEach((box, index) =>{
-const colours = ['green', 'orange', 'pink', 'brown'];
-box.style.border = `2px solid ${colours[index % colours.length]}`;    
-});
+        orangeBoxes.forEach((box, index) =>{
+    const colours = ['green', 'orange', 'pink', 'brown'];
+    box.style.border = `2px solid ${colours[index % colours.length]}`;    
+    });
 </script>
 </body>
 </html>
