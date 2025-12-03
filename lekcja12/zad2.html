@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Pobieranie elementów | JavaScript</title>
+    <style>
+        :root
+        {
+            --text-color: 68, 68, 68;
+        }
+
+        *
+        {
+            font-family: Lato, sans-serif;
+            color: rgb(var(--text-color));
+            line-height: 1.4;
+        }
+
+        body
+        {
+            margin: 1rem;
+            padding: 0;
+        }
+
+        section
+        {
+            &+section
+            {
+                margin-top: 25px;
+            }
+
+            h2
+            {
+                border-bottom: 1px solid rgba(var(--text-color), 0.3);
+            }
+        }
+
+        .text-boxes
+        {
+            display: flex;
+            gap: 10px;
+
+            div
+            {
+                flex: 4 0;
+
+                &:last-of-type
+                {
+                    flex-grow: 2;
+                }
+            }
+        }
+
+        .color-boxes
+        {
+            display: flex;
+            gap: 15px;
+
+            div
+            {
+                background-color: lightgray;
+                width: 30px;
+                height: 30px;
+
+                &.color-box
+                {
+                    background-color: orange;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Pobieranie elementów | JavaScript</h1>
+
+<section>
+    <h2 id="text-color">Akapit tekstu</h2>
+    <p class="aliquam">
+        Aliquam non ut hic ea et quam. <span>Dolores esse quis totam</span> aut et consequatur quia hic iste commodi quis
+        libero explicabo. Natus ut labore sit <span>libero animi consequuntur</span> nulla.
+    </p>
+</section>
+
+<section>
+    <h2 id="bg-color">Kolumny tekstu</h2>
+    <div class="text-boxes">
+        <div>
+            Voluptas est et et distinctio voluptate nihil unde est. Nemo aperiam suscipit iste qui libero voluptas ex
+            dolor nihil animi enim quibusdam. Veniam sapiente facilis et sequi atque vitae quos provident ipsam in dolor.
+            Omnis reiciendis sint excepturi voluptatem incidunt et et sunt et.
+        </div>
+        <div>
+            Numquam sint doloribus perferendis aspernatur illo maxime beatae eum nisi et possimus. Placeat culpa non et
+            vel sit veniam qui architecto dolor nostrum laudantium dicta ut quis.
+        </div>
+        <div>
+            Numquam sint doloribus perferendis aspernatur illo maxime beatae eum nisi et possimus.
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2 id="eight-colors">8 boxów</h2>
+    <div class="color-boxes">
+        <div></div>
+        <div class="color-box"></div>
+        <div></div>
+        <div></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div></div>
+        <div></div>
+    </div>
+</section>
+<script>
+    const akapit = document.querySelector('.aliquam');
+    
+    const allColumns = document.querySelectorAll('.text-boxes div');
+    const column1 = allColumns[1];
+    const column2 = allColumns[2];
+
+    const orangeBoxes = document.querySelectorAll('.color-box');
+    
+    akapit.style.border = '3px solid red';
+    column1.style.border = '3px dashed blue';
+    column2.style.border = '3px dashed purple';
+
+    orangeBoxes.forEach((box, index) =>{
+const colours = ['green', 'orange', 'pink', 'brown'];
+box.style.border = `2px solid ${colours[index % colours.length]}`;    
+});
+</script>
+</body>
+</html>
