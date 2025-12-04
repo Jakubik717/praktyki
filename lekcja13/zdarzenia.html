@@ -191,22 +191,14 @@
     const form = document.getElementById("student-registration");
     form.addEventListener("submit", submitAlert);
 
-    function boxAlert(event) {
-        
-        const classList = this.classList;
-        let color = "";
+   function boxAlert() {
+    let color = [...this.classList]
+        .find(cls => cls.startsWith("bg-"))
+        .replace("bg-", "");
 
-        if (classList.contains("bg-red"))    color = "red";
-        else if (classList.contains("bg-orange")) color = "orange";
-        else if (classList.contains("bg-yellow")) color = "yellow";
-        else if (classList.contains("bg-green"))  color = "green";
-        else if (classList.contains("bg-blue"))   color = "blue";
-        else if (classList.contains("bg-violet")) color = "violet";
-        else if (classList.contains("bg-white"))  color = "white";
-        else if (classList.contains("bg-black"))  color = "black";
+    alert("Kliknięto kolor: " + color);
+}
 
-        alert("Kliknięto kolor: " + color);
-    }
 
     const boxes = document.getElementsByClassName("color-box");
     for (let i = 0; i < boxes.length; i++) {
