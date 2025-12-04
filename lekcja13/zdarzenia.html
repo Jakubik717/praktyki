@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Obsługa zdarzeń | JavaScript</title>
+    <style>
+        :root
+        {
+            --text-color: 68, 68, 68;
+            --spacing: 10px;
+        }
+
+        *
+        {
+            font-family: Lato, sans-serif;
+            color: rgb(var(--text-color));
+            line-height: 1.4;
+        }
+
+        body
+        {
+            margin: 1rem;
+            padding: 0;
+        }
+
+        h2
+        {
+            border-bottom: 1px solid rgba(var(--text-color), 0.3);
+
+            &.no-margin
+            {
+                margin-top: initial;
+            }
+        }
+
+        section
+        {
+            &+section
+            {
+                margin-top: calc(var(--spacing) * 5);
+            }
+        }
+
+        form
+        {
+            label
+            {
+                display: flex;
+
+                &+label
+                {
+                    margin-top: var(--spacing);
+                }
+
+                span
+                {
+                    min-width: 80px;
+                }
+            }
+
+            input
+            {
+                &[type="submit"]
+                {
+                    margin-top: var(--spacing);
+                }
+            }
+        }
+
+        .color-boxes
+        {
+            display: flex;
+            gap: 15px;
+
+            .color-box
+            {
+                border: 1px solid rgba(var(--text-color), 0.2);
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .bg-red
+        {
+            background-color: red;
+        }
+
+        .bg-orange
+        {
+            background-color: orange;
+        }
+
+        .bg-yellow
+        {
+            background-color: yellow;
+        }
+
+        .bg-green
+        {
+            background-color: green;
+        }
+
+        .bg-blue
+        {
+            background-color: blue;
+        }
+
+        .bg-violet
+        {
+            background-color: violet;
+        }
+
+        .bg-white
+        {
+            background-color: white;
+        }
+
+        .bg-black
+        {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Obsługa zdarzeń | JavaScript</h1>
+
+<section>
+    <h2>Formularz</h2>
+    <form id="student-registration">
+        <label>
+            <span>Imię:</span>
+            <input id="first-name" type="text">
+        </label>
+        <label>
+            <span>Nazwisko:</span>
+            <input id="last-name" type="text">
+        </label>
+        <label>
+            <span>Klasa:</span>
+            <select id="school-class">
+                <option value="">Wybierz</option>
+                <option value="I">Klasa I</option>
+                <option value="II">Klasa II</option>
+                <option value="III">Klasa III</option>
+                <option value="IV">Klasa IV</option>
+                <option value="V">Klasa V</option>
+            </select>
+        </label>
+        <input type="submit" value="Zgłaszam się">
+    </form>
+</section>
+
+<section>
+    <h2>8 boxów</h2>
+    <div class="color-boxes">
+        <div class="color-box bg-red"></div>
+        <div class="color-box bg-orange"></div>
+        <div class="color-box bg-yellow"></div>
+        <div class="color-box bg-green"></div>
+        <div class="color-box bg-blue"></div>
+        <div class="color-box bg-violet"></div>
+        <div class="color-box bg-white"></div>
+        <div class="color-box bg-black"></div>
+    </div>
+</section>
+<script>
+        function inputAlert(){
+            alert("kliknales w pole z tekstem");
+        }
+
+        document.getElementById("first-name").addEventListener("click", inputAlert);
+            document.getElementById("last-name").addEventListener("click", inputAlert);
+
+    function selectAlert(){
+        var value = document.getElementById("school-class").value;
+        if (value !== ""){
+            alert("wybrano klase: "+ value);
+        }
+    }
+    document.getElementById("school-class").addEventListener("change", selectAlert);
+
+    function handleSubmit(event){
+        event.preventdefault();
+        alert("przycisk zostal klikniety");
+    }
+
+    document.getElementById("student-registration").addEventListener("submit", submitAlert);
+
+    function boxAlert(event) {
+        
+        var classList = this.classList;
+        var color = "";
+
+        if (classList.contains("bg-red"))    color = "red";
+        else if (classList.contains("bg-orange")) color = "orange";
+        else if (classList.contains("bg-yellow")) color = "yellow";
+        else if (classList.contains("bg-green"))  color = "green";
+        else if (classList.contains("bg-blue"))   color = "blue";
+        else if (classList.contains("bg-violet")) color = "violet";
+        else if (classList.contains("bg-white"))  color = "white";
+        else if (classList.contains("bg-black"))  color = "black";
+
+        alert("Kliknięto kolor: " + color);
+    }
+
+    var boxes = document.getElementsByClassName("color-box");
+    for (var i = 0; i < boxes.length; i++) {
+        boxes[i].addEventListener("click", boxAlert);
+    }
+
+</script>
+</body>
+</html>
