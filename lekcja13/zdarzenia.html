@@ -169,28 +169,32 @@
             alert("kliknales w pole z tekstem");
         }
 
-        document.getElementById("first-name").addEventListener("click", inputAlert);
-            document.getElementById("last-name").addEventListener("click", inputAlert);
+     const firstName = document.getElementById("first-name");
+    const lastName = document.getElementById("last-name")
+
+       firstName.addEventListener("click", inputAlert);
+    lastName.addEventListener("click", inputAlert);
 
     function selectAlert(){
-        var value = document.getElementById("school-class").value;
-        if (value !== ""){
-            alert("wybrano klase: "+ value);
-        }
+        const value = document.getElementById("school-class").value;
+        if (value) alert("wybrano klase: "+ value)
+        
     }
-    document.getElementById("school-class").addEventListener("change", selectAlert);
+    const selectClass = document.getElementById("school-class");
+    selectClass.addEventListener("change", selectAlert);
 
-    function handleSubmit(event){
-        event.preventdefault();
+    function submitAlert(event){
+        event.preventDefault();
         alert("przycisk zostal klikniety");
     }
 
-    document.getElementById("student-registration").addEventListener("submit", submitAlert);
+    const form = document.getElementById("student-registration");
+    form.addEventListener("submit", submitAlert);
 
     function boxAlert(event) {
         
-        var classList = this.classList;
-        var color = "";
+        const classList = this.classList;
+        let color = "";
 
         if (classList.contains("bg-red"))    color = "red";
         else if (classList.contains("bg-orange")) color = "orange";
@@ -204,8 +208,8 @@
         alert("Kliknięto kolor: " + color);
     }
 
-    var boxes = document.getElementsByClassName("color-box");
-    for (var i = 0; i < boxes.length; i++) {
+    const boxes = document.getElementsByClassName("color-box");
+    for (let i = 0; i < boxes.length; i++) {
         boxes[i].addEventListener("click", boxAlert);
     }
 
