@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Obsługa zdarzeń | JavaScript</title>
+    <style>
+        :root
+        {
+            --text-color: 68, 68, 68;
+            --spacing: 10px;
+        }
+
+        *
+        {
+            font-family: Lato, sans-serif;
+            color: rgb(var(--text-color));
+            line-height: 1.4;
+        }
+
+        body
+        {
+            margin: 1rem;
+            padding: 0;
+        }
+
+        h2
+        {
+            border-bottom: 1px solid rgba(var(--text-color), 0.3);
+
+            &.no-margin
+            {
+                margin-top: initial;
+            }
+        }
+
+        section
+        {
+            &+section
+            {
+                margin-top: calc(var(--spacing) * 5);
+            }
+        }
+
+        form
+        {
+            label
+            {
+                display: flex;
+
+                &+label
+                {
+                    margin-top: var(--spacing);
+                }
+
+                span
+                {
+                    min-width: 80px;
+                }
+            }
+
+            input
+            {
+                &[type="submit"]
+                {
+                    margin-top: var(--spacing);
+                }
+            }
+        }
+
+        .color-boxes
+        {
+            display: flex;
+            gap: 15px;
+
+            .color-box
+            {
+                border: 1px solid rgba(var(--text-color), 0.2);
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .bg-red
+        {
+            background-color: red;
+        }
+
+        .bg-orange
+        {
+            background-color: orange;
+        }
+
+        .bg-yellow
+        {
+            background-color: yellow;
+        }
+
+        .bg-green
+        {
+            background-color: green;
+        }
+
+        .bg-blue
+        {
+            background-color: blue;
+        }
+
+        .bg-violet
+        {
+            background-color: violet;
+        }
+
+        .bg-white
+        {
+            background-color: white;
+        }
+
+        .bg-black
+        {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Obsługa zdarzeń | JavaScript</h1>
+
+<section>
+    <h2>Formularz</h2>
+    <form id="student-registration">
+        <label>
+            <span>Imię:</span>
+            <input id="first-name" type="text">
+        </label>
+        <label>
+            <span>Nazwisko:</span>
+            <input id="last-name" type="text">
+        </label>
+        <label>
+            <span>Klasa:</span>
+            <select id="school-class">
+                <option value="">Wybierz</option>
+                <option value="I">Klasa I</option>
+                <option value="II">Klasa II</option>
+                <option value="III">Klasa III</option>
+                <option value="IV">Klasa IV</option>
+                <option value="V">Klasa V</option>
+            </select>
+        </label>
+        <input type="submit" value="Zgłaszam się">
+    </form>
+</section>
+
+<section>
+    <h2>8 boxów</h2>
+    <div class="color-boxes">
+        <div class="color-box bg-red"></div>
+        <div class="color-box bg-orange"></div>
+        <div class="color-box bg-yellow"></div>
+        <div class="color-box bg-green"></div>
+        <div class="color-box bg-blue"></div>
+        <div class="color-box bg-violet"></div>
+        <div class="color-box bg-white"></div>
+        <div class="color-box bg-black"></div>
+    </div>
+</section>
+<script>
+        function inputAlert(){
+            alert("kliknales w pole z tekstem");
+        }
+
+     const firstName = document.getElementById("first-name");
+    const lastName = document.getElementById("last-name")
+
+       firstName.addEventListener("click", inputAlert);
+    lastName.addEventListener("click", inputAlert);
+
+    function selectAlert(){
+        const value = document.getElementById("school-class").value;
+        if (value) alert("wybrano klase: "+ value)
+        
+    }
+    const selectClass = document.getElementById("school-class");
+    selectClass.addEventListener("change", selectAlert);
+
+    function submitAlert(event){
+        event.preventDefault();
+        alert("przycisk zostal klikniety");
+    }
+
+    const form = document.getElementById("student-registration");
+    form.addEventListener("submit", submitAlert);
+
+
+    function boxAlert(event) {
+
+        let color = this.classList[1];
+        let colorClear = color.replace("bg-", "");
+
+        //  console.log(this.classList);
+        //  console.log(color);
+        //  console.log(colorClear);
+
+        alert("Kliknięto kolor: " + colorClear);
+
+    }
+
+
+    const boxes = document.getElementsByClassName("color-box");
+    for (let i = 0; i < boxes.length; i++) {
+        boxes[i].addEventListener("click", boxAlert);
+    }
+
+</script>
+</body>
+</html>
