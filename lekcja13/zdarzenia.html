@@ -191,13 +191,19 @@
     const form = document.getElementById("student-registration");
     form.addEventListener("submit", submitAlert);
 
-   function boxAlert() {
-    let color = [...this.classList]
-        .find(cls => cls.startsWith("bg-"))
-        .replace("bg-", "");
 
-    alert("Kliknięto kolor: " + color);
-}
+    function boxAlert(event) {
+
+        let color = this.classList[1];
+        let colorClear = color.replace("bg-", "");
+
+        //  console.log(this.classList);
+        //  console.log(color);
+        //  console.log(colorClear);
+
+        alert("Kliknięto kolor: " + colorClear);
+
+    }
 
 
     const boxes = document.getElementsByClassName("color-box");
