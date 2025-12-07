@@ -1,0 +1,22 @@
+services:
+    php:
+        image: php:cli
+        command: php -S 0.0.0.0:80 -t /var/www/html
+        ports:
+            - "8080:80"
+        volumes:
+            - .:/var/www/html
+
+    db:
+        image: mariadb
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: notSecureChangeMe
+
+    phpmyadmin:
+        image: phpmyadmin
+        restart: always
+        ports:
+            - "8081:80"
+        environment:
+            - PMA_ARBITRARY=1

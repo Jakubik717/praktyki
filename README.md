@@ -2,8 +2,19 @@
 
 ## Run the project
 
-### Using built-in PHP server using `docker run` with the official Docker PHP image
+1. Install [Docker](https://www.docker.com)
 
-```shell
-docker run --rm -v "$PWD":/var/www/html -p 8000:8000 php:cli php -S 0.0.0.0:8000 -t /var/www/html
-```
+    > See https://docs.docker.com/desktop
+
+2. Start Docker containers
+
+    ```shell
+    docker compose up -d
+    ```
+
+3. Open in a web browser
+
+   - PHP application: http://127.0.0.1:8080
+   - phpMyAdmin: http://127.0.0.1:8081
+        - User: `root`
+        - Password: `notSecureChangeMe`
