@@ -176,12 +176,22 @@
 
  const form = document.getElementById("student-registration");
 
+ function showMessage(id, message, isValid){
+    const p = document.createElement("p")
+    p.innerText = message;
+    id.after(p);
+//1. stwórz nowy element html
+//2.dodaj nowo utworzony element za elementem o identyfikatorze id
+//p. wstaw do niego message jako jego treść
+ }
+
  form.addEventListener("submit", function(event) {
         event.preventDefault(); 
 
           const imie = document.getElementById("first-name").value;
         const nazwisko = document.getElementById("last-name").value;
         const klasa = document.getElementById("school-class").value;
+       
 
              if (!imie || imie.length < 3 || imie.trim() !== imie) {
             showMessage("first-name", "Imię musi mieć min. 3 znaki i nie może zaczynać ani kończyć spacją.", false);
