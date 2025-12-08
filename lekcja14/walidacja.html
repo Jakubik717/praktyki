@@ -179,10 +179,18 @@
  function showMessage(id, message, isValid){
     const p = document.createElement("p")
     p.innerText = message;
-
+    if(isValid === true){
+        p.classList.add("green");
+    }else {
+        p.classList.add("red");
+    }
     const element = document.getElementById(id);
     element.after(p);
-
+//1.dodaj warunek sprawdzający argument isValid
+//2.jeśli isValid jest true, to dodaj do elementu p klase css z kolorem zielonym
+//3.jeśli isValid jest false, to dodaj  do elementu p klase css z kolorem czerwonym
+//4.dodaj klase css z kolorem zielonym 
+//4.dodaj klase css z kolorem czerwonym 
  }
 
  form.addEventListener("submit", function(event) {
