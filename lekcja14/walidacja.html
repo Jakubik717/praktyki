@@ -163,6 +163,9 @@
         const imie = form.querySelector('[name="first-name"]').value;
         const nazwisko = form.querySelector('[name="last-name"]').value;
         const klasa = form.querySelector('[name="school-class"]').value;
+
+        console.log(`Imię: ${imie}, Nazwisko: ${nazwisko}, Klasa: ${klasa}`);
+
     }
     form.addEventListener("input", showValues);
     form.addEventListener("change", showValues);
