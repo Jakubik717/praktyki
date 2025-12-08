@@ -155,25 +155,28 @@
 <div id="html-values"></div>
 </section>
 <script>
-    function toDo(){
-    const form = document.getElementById("student-registration");
-    const output = document.getElementById("form-values");
+     const form = document.getElementById("student-registration");
+     const output = document.getElementById("form-values");
 
-        function showValues() {
-        const imie = form.querySelector('[name="first-name"]').value;
-        const nazwisko = form.querySelector('[name="last-name"]').value;
-        const klasa = form.querySelector('[name="school-class"]').value;
+    function showValues() {
+
+        const imie = document.getElementById("first-name").value;
+        const nazwisko = document.getElementById("last-name").value;
+        const klasa = document.getElementById("school-class").value;
 
         console.log(`Imię: ${imie}, Nazwisko: ${nazwisko}, Klasa: ${klasa}`);
 
+//Wartości wyświetl w sekcji Odczytywanie wartości z pól formularza w obszarze Do zrobienia
+    const odczyt = document.getElementById("form-values").value;
+    div.innerText = `Imię: ${imie}, Nazwisko: ${nazwisko}, Klasa: ${klasa}`;
     }
+
     form.addEventListener("input", showValues);
     form.addEventListener("change", showValues);
 
     showValues();
-}
 
-   const secondColumn = document.querySelector(".text-boxes div:nth-child(2)");
+   const secondColumn = document.querySelector(`.text-boxes div:nth-child(2)`);
     const outputHtml = document.getElementById("html-values");
 
     if (secondColumn) {
@@ -183,7 +186,6 @@
         }
     }
 
- const form = document.getElementById("student-registration");
 
  function showMessage(id, message, isValid){
     const p = document.createElement("p")
