@@ -179,10 +179,10 @@
  function showMessage(id, message, isValid){
     const p = document.createElement("p")
     p.innerText = message;
-    id.after(p);
-//1. stwórz nowy element html
-//2.dodaj nowo utworzony element za elementem o identyfikatorze id
-//p. wstaw do niego message jako jego treść
+
+    const element = document.getElementById(id);
+    element.after(p);
+
  }
 
  form.addEventListener("submit", function(event) {
