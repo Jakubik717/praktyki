@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Odczytywanie wartości z pól formularza lub elementów HTML. Walidacja danych formularza. | JavaScript</title>
+    <style>
+        :root
+        {
+            --text-color: 68, 68, 68;
+            --spacing: 10px;
+        }
+
+        *
+        {
+            font-family: Lato, sans-serif;
+            color: rgb(var(--text-color));
+            line-height: 1.4;
+        }
+
+        body
+        {
+            margin: 1rem;
+            padding: 0;
+        }
+
+        h1
+        {
+            border-bottom: 1px solid rgba(var(--text-color), 0.3);
+
+            &.no-margin
+            {
+                margin-top: initial;
+            }
+        }
+
+        section
+        {
+            &+section
+            {
+                margin-top: calc(var(--spacing) * 5);
+            }
+        }
+
+        form
+        {
+            label
+            {
+                display: flex;
+
+                &+label
+                {
+                    margin-top: var(--spacing);
+                }
+
+                span
+                {
+                    min-width: 80px;
+                }
+            }
+
+            input
+            {
+                &[type="submit"]
+                {
+                    margin-top: var(--spacing);
+                }
+            }
+        }
+
+        .todo
+        {
+            border: 1px dashed rgba(var(--text-color), 0.5);
+            padding: calc(var(--spacing) * 5);
+            text-align: center;
+            font-style: italic;
+            color: rgba(var(--text-color), 0.75);
+        }
+
+        .text-boxes
+        {
+            display: flex;
+            gap: var(--spacing);
+
+            div
+            {
+                flex: 4 0;
+
+                &:last-of-type
+                {
+                    flex-grow: 2;
+                }
+            }
+        }
+        .green{
+            color: green;
+        }
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<section>
+    <h1>Formularz</h1>
+    <form id="student-registration">
+        <label>
+            <span>Imię:</span>
+            <input id="first-name" type="text">
+        </label>
+        <label>
+            <span>Nazwisko:</span>
+            <input id="last-name" type="text">
+        </label>
+        <label>
+            <span>Klasa:</span>
+            <select id="school-class">
+                <option value="">Wybierz</option>
+                <option value="I">Klasa I</option>
+                <option value="II">Klasa II</option>
+                <option value="III">Klasa III</option>
+                <option value="IV">Klasa IV</option>
+                <option value="V">Klasa V</option>
+            </select>
+        </label>
+        <input type="submit" value="Zgłaszam się">
+    </form>
+</section>
+
+<section>
+    <h1>Odczytywanie wartości z pól formularza</h1>
+    <div id="form-values">Wypełnij formularz</div>
+
+</section>
+
+<section>
+    <h1>Elementy HTML (z tekstem)</h1>
+    <div class="text-boxes">
+        <div>
+            Voluptas est et et distinctio voluptate nihil unde est. Nemo aperiam suscipit iste qui libero voluptas ex
+            dolor nihil animi enim quibusdam. Veniam sapiente facilis et sequi atque vitae quos provident ipsam in dolor.
+            Omnis reiciendis sint excepturi voluptatem incidunt et et sunt et.
+        </div>
+        <div>
+            Numquam sint doloribus perferendis aspernatur illo maxime beatae eum nisi et possimus. <span>Placeat culpa non et vel sit veniam qui architecto dolor nostrum laudantium dicta ut quis.</span>
+        </div>
+        <div>
+            Numquam sint doloribus perferendis aspernatur illo maxime beatae eum nisi et possimus.
+        </div>
+    </div>
+</section>
+
+<section>
+    <h1>Odczytywanie wartości z elementów HTML</h1>
+<div id="html-values"></div>
+</section>
+<script>
+     const form = document.getElementById("student-registration");
+     const output = document.getElementById("form-values");
+
+    function showValues() {
+
+        const imie = document.getElementById("first-name").value;
+        const nazwisko = document.getElementById("last-name").value;
+        const klasa = document.getElementById("school-class").value;
+
+
+    const div = document.getElementById("form-values");
+    div.innerText = `Imię: ${imie}, Nazwisko: ${nazwisko}, Klasa: ${klasa}`;
+    }
+
+    form.addEventListener("input", showValues);
+    form.addEventListener("change", showValues);
+
+    showValues();
+
+   const secondColumn = document.querySelector(`.text-boxes div:nth-child(2)`);
+    const outputHtml = document.getElementById("html-values");
+
+    if (secondColumn) {
+        const sentences = secondColumn.innerText.split(".");
+        if (sentences.length >= 2) {
+            outputHtml.innerText = sentences[1].trim() + ".";
+        }
+    }
+
+
+ function showMessage(id, message, isValid){
+    const p = document.createElement("p")
+    p.innerText = message;
+    if(isValid === true){
+        p.classList.add("green");
+    }else {
+        p.classList.add("red");
+    }
+    const element = document.getElementById(id);
+    element.after(p);
+
+ }
+
+ form.addEventListener("submit", function(event) {
+        event.preventDefault(); 
+
+          const imie = document.getElementById("first-name").value;
+        const nazwisko = document.getElementById("last-name").value;
+        const klasa = document.getElementById("school-class").value;
+       
+
+             if (!imie || imie.length < 3 || imie.trim() !== imie) {
+            showMessage("first-name", "Imię musi mieć min. 3 znaki i nie może zaczynać ani kończyć spacją.", false);
+        } else {
+            showMessage("first-name", "OK", true);
+        }
+
+          if (!nazwisko || nazwisko.length < 3 || nazwisko.trim() !== nazwisko) {
+            showMessage("last-name", "Nazwisko musi mieć min. 3 znaki i nie może zaczynać ani kończyć spacją.", false);
+        } else {
+            showMessage("last-name", "OK", true);
+        }
+
+          if (!klasa) {
+            showMessage("school-class", "Musisz wybrać klasę.", false);
+        } else {
+            showMessage("school-class", "OK", true);
+        }
+ });
+</script>
+</body>
+</html>
