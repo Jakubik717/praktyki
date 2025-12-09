@@ -1,0 +1,133 @@
+{
+    "Jakub": {
+        "przedmioty": {
+            "J\u0119zyk polski": [
+                "3"
+            ],
+            "Matematyka": [
+                "4"
+            ],
+            "J\u0119zyk angielski": [
+                "5"
+            ],
+            "J\u0119zyk niemiecki": [
+                "2"
+            ],
+            "Fizyka": [
+                "6"
+            ]
+        }
+    },
+    "Bartek": {
+        "przedmioty": {
+            "J\u0119zyk polski": [
+                "3"
+            ],
+            "Matematyka": [
+                "4"
+            ],
+            "J\u0119zyk angielski": [
+                "5"
+            ],
+            "J\u0119zyk niemiecki": [
+                "2"
+            ],
+            "Fizyka": [
+                "6"
+            ]
+        }
+    },
+    "Adam": {
+        "przedmioty": {
+            "J\u0119zyk polski": [
+                "3",
+                "4",
+                "6"
+            ],
+            "Matematyka": [
+                "2",
+                "5",
+                "6"
+            ],
+            "J\u0119zyk angielski": [
+                "1",
+                "3",
+                "1"
+            ],
+            "J\u0119zyk niemiecki": [
+                "2",
+                "6",
+                "5"
+            ],
+            "Fizyka": [
+                "3",
+                "4",
+                "1"
+            ]
+        }
+    },
+    "Maciej": {
+        "przedmioty": {
+            "J\u0119zyk polski": [
+                "2"
+            ],
+            "Matematyka": [
+                "3"
+            ],
+            "J\u0119zyk angielski": [
+                "5"
+            ],
+            "J\u0119zyk niemiecki": [
+                "4"
+            ],
+            "Fizyka": [
+                "2"
+            ]
+        }
+    },
+    "": {
+        "data_dodania": "2025-11-23 20:56",
+        "przedmioty": []
+    },
+    "Kacper": {
+        "przedmioty": {
+            "J\u0119zyk polski": [
+                "4"
+            ],
+            "Matematyka": [
+                "3"
+            ],
+            "J\u0119zyk angielski": [
+                "6"
+            ],
+            "J\u0119zyk niemiecki": [
+                "5"
+            ],
+            "Fizyka": [
+                "2"
+            ]
+        }
+    },
+    "Piotr": {
+        "data_dodania": "2025-11-23 20:53",
+        "przedmioty": []
+    },
+    "Andrzej": {
+        "data_dodania": "2025-11-23 20:45",
+        "przedmioty": {
+            "J\u0119zyk polski": [
+                "3"
+            ],
+            "Matematyka": [
+                "6"
+            ],
+            "J\u0119zyk angielski": [
+                "5"
+            ]
+        }
+    },
+    "Jan": {
+        "data_dodania": "2025-11-23 20:47",
+        "przedmioty": []
+    }
+}
