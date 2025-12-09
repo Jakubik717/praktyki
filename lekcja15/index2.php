@@ -1,6 +1,7 @@
 <?php
 $address="";
 
+//if (!empty($_SERVER["SERVER_ADDR"])) {
 if (isset($_SERVER["SERVER_ADDR"])) {
     $address=$_SERVER["SERVER_ADDR"];
 }
