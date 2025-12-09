@@ -1,0 +1,4 @@
+
+7.DELETE FROM students WHERE id = 2;
+
+8.DELETE FROM students WHERE school_class = 1 LIMIT 2;

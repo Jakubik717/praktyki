@@ -1,0 +1,4 @@
+
+3. SELECT * FROM students WHERE id > 3 AND id <= 5 ORDER BY id;
+
+4.SELECT * FROM students WHERE created_at >= NOW() - INTERVAL 15 MINUTE;
