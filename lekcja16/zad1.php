@@ -146,15 +146,44 @@
 
 <section>
     <h2>Dane z formularza</h2>
+<!-- Uzyj ladniejszej i czytelniejszej dla uzytkownika prezentacji danych.
+  Kazda wartosc moze byc w osobnym wierszu,
+  moze to byc lista <ul> lub cokolwiek innego niz techniczny print_r() -->
+    <?php  if(empty($_GET)): ?>
+        <div class="todo">Do zrobienia</div>
+    <?php else: ?>
+        <ul>
+            <li>Imię: <?php echo $_GET["first-name"] ?></li>
+            <li>Nazwisko: <?php echo $_GET["last-name"] ?></li>
+            <li>Klasa: <?php echo $_GET["school-class"] ?></li>
+            <li>Dzień tygodnia:
+                <?php
+                if (isset($_GET["weekday"])){
+                    echo $_GET["weekday"];
+                } else {
+                    echo "nie wybrano";
+                }
+                ?>
+            </li>
+            <li>Akceptuję regulamin:
+                   <?php
+                if (isset($_GET["terms-of-service"])){
+                    echo "tak";
+                } else {
+                    echo "nie";
+                }
+                ?>
+            </li>
+        </ul>
+    <?php endif ?>
+
     <?php
-    if(!empty($_GET)){
-        echo "<pre>";
+    if(empty($_GET)){
+        echo '<div class="todo">poprzednie</div>';    
+    } else{  
+            echo "<pre>";
         print_r($_GET);
         echo "</pre>";
-    } else{
-
-    
-    echo '<div class="todo">Do zrobienia</div>';
     }
     ?>
 </section>
