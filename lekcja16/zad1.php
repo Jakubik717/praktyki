@@ -96,11 +96,11 @@
     <form method="GET">
         <label class="form-row">
             <span>Imię:</span>
-            <input name="first-name" type="text" value="<?php echo $_GET["first-name"] ?>">
+            <input name="first-name" type="text" value="<?php if (isset($_GET['first-name'])) echo $_GET['first-name']; ?>">
         </label>
         <label class="form-row">
             <span>Nazwisko:</span>
-            <input name="last-name" type="text" value="<?php echo $_GET["last-name"] ?>">
+            <input name="last-name" type="text" value="<?php if (isset($_GET['last-name'])) echo $_GET['last-name']; ?>">
         </label>
         <label class="form-row">
             <span>Klasa:</span>
@@ -146,9 +146,7 @@
 
 <section>
     <h2>Dane z formularza</h2>
-<!-- Uzyj ladniejszej i czytelniejszej dla uzytkownika prezentacji danych.
-  Kazda wartosc moze byc w osobnym wierszu,
-  moze to byc lista <ul> lub cokolwiek innego niz techniczny print_r() -->
+    
     <?php  if(empty($_GET)): ?>
         <div class="todo">Do zrobienia</div>
     <?php else: ?>
