@@ -110,25 +110,34 @@
         <?php
         if(isset($_GET["first-name"])){
             $first_name=$_GET["first-name"];
-            $first = $first_name;
-            $last = $first_name;
+            $first_name_length = strlen($first_name);
+            
+            $last_index = $first_name_length - 1;
+            $first = "";
+            $last = "";
 
-            if(strlen($first_name) < 3 && $first == " " && $last== " "){
+            if(!empty($first_name)){            
+                $first = $first_name[0];
+                $last = $first_name[$last_index] ;            
+            }
+
+            if($first_name_length < 3 ){
                 // echo '<p class="red">wpisz imie</p>';
-               
-                // resy
-                // 0123
-                // długość = 4
-
-                // hjhkujgh
-                // 01234567
-                // długość = 8
-
-                // indeks ostatniego znaku w stringu jest zawsze o jeden 
-                // mniejszy od długości tego stringa
 
                 ?>
                 <p class="red">Imię musi być podane i musi zawierać minimum 3 znaki</p>
+                <?php
+            }
+
+            if($first == " ") {
+                ?>
+                <p class="red">Imię nie może zaczynać się spacją</p>
+                <?php
+            }
+
+            if($last == " ") {
+                ?>
+                <p class="red">Imię nie może kończyć się spacją</p>
                 <?php
             }
         }
@@ -138,6 +147,43 @@
             <span>Nazwisko:</span>
             <input name="last-name" type="text" value="<?php if (isset($_GET['last-name'])) echo $_GET['last-name']; ?>">
         </label>
+
+ <?php
+        if(isset($_GET["last-name"])){
+            $last_name=$_GET["last-name"];
+            $last_name_length = strlen($last_name);
+            
+            $last_index = $last_name_length - 1;
+            $first = "";
+            $last = "";
+
+            if(!empty($last_name)){            
+                $first = $last_name[0];
+                $last = $last_name[$last_index] ;            
+            }
+
+            if($last_name_length < 3 ){
+                // echo '<p class="red">wpisz imie</p>';
+
+                ?>
+                <p class="red">Nazwisko musi być podane i musi zawierać minimum 3 znaki</p>
+                <?php
+            }
+
+            if($first == " ") {
+                ?>
+                <p class="red">Nazwisko nie może zaczynać się spacją</p>
+                <?php
+            }
+
+            if($last == " ") {
+                ?>
+                <p class="red">Nazwisko nie może kończyć się spacją</p>
+                <?php
+            }
+        }
+        ?>
+
         <label class="form-row">
             <span>Klasa:</span>
             <select name="school-class">
@@ -149,6 +195,15 @@
                 <option value="V" <?php if (isset($_GET["school-class"]) && $_GET["school-class"]=="V"): ?>selected<?php endif ?>>Klasa V</option>
             </select>
         </label>
+<?php
+        if(isset($_GET["school-class"])){
+            if($_GET["school-class"] == ""){            
+                ?>
+                <p class="red">Klasa musi być wybrana</p>
+                <?php
+            }
+        }
+?>
         <div class="form-row weekdays">
             Dzień tygodnia:
             <label>
@@ -171,11 +226,35 @@
                 <input type="radio" name="weekday" value="friday" <?php if (isset($_GET["weekday"]) && $_GET["weekday"]=="friday"): ?> checked <?php endif ?>>
                 Piątek
             </label>
+
+        <?php
+            if(isset($_GET["weekday"])) {
+
+            } else {
+                ?>
+                <p class="red">Musisz wybrać dzień tygodnia</p>
+                <?php
+            }
+        ?>
+
+
         </div>
         <label class="form-row">
             <input type="checkbox" name="terms-of-service" <?php if (isset($_GET["terms-of-service"])): ?> checked <?php endif ?>>
             <span>Akceptuję regulamin</span>
         </label>
+
+    <?php
+        if(isset($_GET["terms-of-service"])) {
+
+        } else {
+            ?>
+            <p class="red">Regulamin musi być zaakceptowany</p>
+            <?php
+        }
+    ?>
+
+
         <input type="submit" value="Zgłaszam się">
     </form>
 </section>
