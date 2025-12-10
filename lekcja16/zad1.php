@@ -85,6 +85,14 @@
             font-style: italic;
             color: rgba(var(--text-color), 0.75);
         }
+
+        .green{
+            color: green;
+        }
+
+        .red{
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -98,6 +106,34 @@
             <span>Imię:</span>
             <input name="first-name" type="text" value="<?php if (isset($_GET['first-name'])) echo $_GET['first-name']; ?>">
         </label>
+
+        <?php
+        if(isset($_GET["first-name"])){
+            $first_name=$_GET["first-name"];
+            $first = $first_name;
+            $last = $first_name;
+
+            if(strlen($first_name) < 3 && $first == " " && $last== " "){
+                // echo '<p class="red">wpisz imie</p>';
+               
+                // resy
+                // 0123
+                // długość = 4
+
+                // hjhkujgh
+                // 01234567
+                // długość = 8
+
+                // indeks ostatniego znaku w stringu jest zawsze o jeden 
+                // mniejszy od długości tego stringa
+
+                ?>
+                <p class="red">Imię musi być podane i musi zawierać minimum 3 znaki</p>
+                <?php
+            }
+        }
+        ?>
+
         <label class="form-row">
             <span>Nazwisko:</span>
             <input name="last-name" type="text" value="<?php if (isset($_GET['last-name'])) echo $_GET['last-name']; ?>">
@@ -146,7 +182,7 @@
 
 <section>
     <h2>Dane z formularza</h2>
-    
+
     <?php  if(empty($_GET)): ?>
         <div class="todo">Do zrobienia</div>
     <?php else: ?>
@@ -180,7 +216,7 @@
         echo '<div class="todo">poprzednie</div>';    
     } else{  
             echo "<pre>";
-        print_r($_GET);
+        var_dump($_GET, strlen($_GET["first-name"]), $_GET["first-name"][0]);
         echo "</pre>";
     }
     ?>
