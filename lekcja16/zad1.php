@@ -96,48 +96,48 @@
     <form method="GET">
         <label class="form-row">
             <span>Imię:</span>
-            <input name="first-name" type="text">
+            <input name="first-name" type="text" value="<?php echo $_GET["first-name"] ?>">
         </label>
         <label class="form-row">
             <span>Nazwisko:</span>
-            <input name="last-name" type="text">
+            <input name="last-name" type="text" value="<?php echo $_GET["last-name"] ?>">
         </label>
         <label class="form-row">
             <span>Klasa:</span>
             <select name="school-class">
-                <option value="">Wybierz</option>
-                <option value="I">Klasa I</option>
-                <option value="II">Klasa II</option>
-                <option value="III">Klasa III</option>
-                <option value="IV">Klasa IV</option>
-                <option value="V">Klasa V</option>
+                <option value="" <?php if (isset($_GET["school-class"]) && $_GET["school-class"]==""): ?>selected<?php endif ?>>Wybierz</option>
+                <option value="I" <?php if (isset($_GET["school-class"]) && $_GET["school-class"]=="I"): ?>selected<?php endif ?>>Klasa I</option>
+                <option value="II" <?php if (isset($_GET["school-class"]) && $_GET["school-class"]=="II"): ?>selected<?php endif ?>>Klasa II</option>
+                <option value="III" <?php if (isset($_GET["school-class"]) && $_GET["school-class"]=="III"): ?>selected<?php endif ?>>Klasa III</option>
+                <option value="IV" <?php if (isset($_GET["school-class"]) && $_GET["school-class"]=="IV"): ?>selected<?php endif ?>>Klasa IV</option>
+                <option value="V" <?php if (isset($_GET["school-class"]) && $_GET["school-class"]=="V"): ?>selected<?php endif ?>>Klasa V</option>
             </select>
         </label>
         <div class="form-row weekdays">
             Dzień tygodnia:
             <label>
-                <input type="radio" name="weekday" value="monday">
+                <input type="radio" name="weekday" value="monday" <?php if (isset($_GET["weekday"]) && $_GET["weekday"]=="monday"): ?> checked <?php endif ?>>
                 Poniedziałek
             </label>
             <label>
-                <input type="radio" name="weekday" value="tuesday">
+                <input type="radio" name="weekday" value="tuesday" <?php if (isset($_GET["weekday"]) && $_GET["weekday"]=="tuesday"): ?> checked <?php endif ?>>
                 Wtorek
             </label>
             <label>
-                <input type="radio" name="weekday" value="wednesday">
+                <input type="radio" name="weekday" value="wednesday" <?php if (isset($_GET["weekday"]) && $_GET["weekday"]=="wednesday"): ?> checked <?php endif ?>>
                 Środa
             </label>
             <label>
-                <input type="radio" name="weekday" value="thursday">
+                <input type="radio" name="weekday" value="thursday" <?php if (isset($_GET["weekday"]) && $_GET["weekday"]=="thursday"): ?> checked <?php endif ?>>
                 Czwartek
             </label>
             <label>
-                <input type="radio" name="weekday" value="friday">
+                <input type="radio" name="weekday" value="friday" <?php if (isset($_GET["weekday"]) && $_GET["weekday"]=="friday"): ?> checked <?php endif ?>>
                 Piątek
             </label>
         </div>
         <label class="form-row">
-            <input type="checkbox" name="terms-of-service">
+            <input type="checkbox" name="terms-of-service" <?php if (isset($_GET["terms-of-service"])): ?> checked <?php endif ?>>
             <span>Akceptuję regulamin</span>
         </label>
         <input type="submit" value="Zgłaszam się">
