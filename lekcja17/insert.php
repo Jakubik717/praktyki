@@ -1,20 +1,23 @@
 <?php
-if (isset($_GET['first-name']) && $_GET['first-name'] !== '') {
-
+if (
+    isset($_GET['submit']) &&
+    isset($_GET['first-name']) &&
+    isset($_GET['last-name']) &&
+    isset($_GET['school-class']) &&
+    isset($_GET['grade-average'])
+) {
     $first = $_GET['first-name'];
     $last = $_GET['last-name'];
     $class = $_GET['school-class'];
     $avg = $_GET['grade-average'];
 
-    $conn = mysqli_connect("localhost", "root", "", "laczenie");
+    $connection = mysqli_connect("localhost", "root", "", "laczenie");
 
-    mysqli_execute_query(
-        $conn,
-        "INSERT INTO students (first_name, last_name, school_class, grade_average)
-         VALUES ('$first', '$last', '$class', '$avg')"
-    );
+    $query = "INSERT INTO students (first_name, last_name, school_class, grade_average) 
+              VALUES (?, ?, ?, ?)";
+    mysqli_execute_query($connection, $query, [$first, $last, $class, $avg]);
 
-    mysqli_close($conn);
+    mysqli_close($connection);
 
     header("Location: index.php");
     exit;
