@@ -228,6 +228,7 @@
             </label>
 
         <?php
+        if (!empty($_GET)) {
             if(isset($_GET["weekday"])) {
 
             } else {
@@ -235,6 +236,7 @@
                 <p class="red">Musisz wybrać dzień tygodnia</p>
                 <?php
             }
+        }
         ?>
 
 
@@ -245,6 +247,7 @@
         </label>
 
     <?php
+    if (!empty($_GET)) {    
         if(isset($_GET["terms-of-service"])) {
 
         } else {
@@ -252,6 +255,7 @@
             <p class="red">Regulamin musi być zaakceptowany</p>
             <?php
         }
+    }
     ?>
 
 
@@ -290,15 +294,7 @@
         </ul>
     <?php endif ?>
 
-    <?php
-    if(empty($_GET)){
-        echo '<div class="todo">poprzednie</div>';    
-    } else{  
-            echo "<pre>";
-        var_dump($_GET, strlen($_GET["first-name"]), $_GET["first-name"][0]);
-        echo "</pre>";
-    }
-    ?>
+    
 </section>
 
 </body>
