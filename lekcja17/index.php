@@ -122,6 +122,8 @@ require "edit.php";
     $connection = mysqli_connect("localhost", "root", "", "laczenie");
     mysqli_select_db($connection, "laczenie");
     $result = mysqli_execute_query($connection, "SELECT * FROM students");
+    $rows_count = mysqli_num_rows($result);
+    //var_dump($rows_count); die;
 ?>
 <table border="1" cellpadding="8">
     <tr>
@@ -132,7 +134,12 @@ require "edit.php";
         <th>Dodano</th>
         <th>Akcje</th>
     </tr>
-    <?php
+    <?php if($rows_count == 0): ?>
+        <tr>
+            <td colspan="6" style="text-align: center;" >Brak danych</td>
+        </tr>
+    <?php 
+    else:
   while ($row = mysqli_fetch_assoc($result)) {
     echo "<tr>";
     echo "<td>".$row['first_name']."</td>";
@@ -144,9 +151,9 @@ require "edit.php";
     echo "</tr>";
     }
     mysqli_close($connection);
+endif;
     ?>
     </table>
-    <div class="todo">Do zrobienia</div>
 </section>
 
 </body>
