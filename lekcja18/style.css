@@ -1,0 +1,67 @@
+body{
+    background-color: lightblue;
+}
+.head{
+    text-align: center;
+        padding: 40px; 
+        margin: 0;
+        background-color: aqua;
+}
+.sizes{
+    display: flex;
+        margin: 0;
+        flex: 1;
+        height: calc(100vh - 300px);
+}
+.left_menu{
+        text-align: center;
+        padding: 20px;
+        margin-right: 0; 
+        background-color: aqua; 
+        flex: 1;
+}
+.middle_menu{
+        text-align: center; 
+        padding: 20px; 
+        margin-left: 0; 
+        background-color: aquamarine;
+        flex: 3;
+        overflow: auto;
+}
+.right_menu{
+        text-align: center; 
+        padding: 20px; 
+        margin-left: 0; 
+        background-color: aqua;
+        flex: 1;
+}
+.foot{
+        text-align: start; 
+        padding: 40px; 
+        margin: 0; 
+        background-color: aqua;
+}
+.list{
+    list-style-type: disc;
+    text-align: left;
+}
+
+.right_menu p,
+.right_menu label,
+
+.right_menu button {
+    float: left;
+    clear: both;
+}
+.photo1{
+    width: 300px;
+    height: 350px;
+}
+.photo2{
+    width: 200;
+    height: 150px;
+}
+.photo3{
+    width: 400;
+    height: 350px;
+}
