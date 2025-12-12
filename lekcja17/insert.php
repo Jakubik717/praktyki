@@ -11,10 +11,19 @@ if (
     $query = "INSERT INTO students (first_name, last_name, school_class, grade_average) 
               VALUES (?, ?, ?, ?)";
 
+    $school_class = match ($_GET['school-class']){
+        "" => 0,
+        "I" => 1,
+        "II" => 2,
+        "III" => 3,
+        "IV" => 4,
+        "V" => 5,
+    };
+
     mysqli_execute_query(
         $connection,
         $query,
-        [$_GET['first-name'], $_GET['last-name'], $_GET['school-class'], $_GET['grade-average']]
+        [$_GET['first-name'], $_GET['last-name'], $school_class, $_GET['grade-average']]
     );
 
     mysqli_close($connection);
